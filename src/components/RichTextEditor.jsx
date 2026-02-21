@@ -114,8 +114,8 @@ export default function RichTextEditor({ content, setContent }) {
   const btn = (active) =>
     `px-3 py-1 rounded border text-sm transition ${
       active
-        ? "bg-foreground text-background border-foreground"
-        : "bg-white text-black hover:bg-gray-100"
+        ? "bg-white text-black hover:bg-gray-100"
+        : "bg-foreground text-background border-foreground"
     }`;
 
   return (

@@ -1,13 +1,8 @@
 export default async function BlogDetail({ params }) {
   const { id } = await params
-  const baseUrl =
-    process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000"
-
-  const res = await fetch(`${baseUrl}/api/blogs`, {
-    cache: "no-store",
-  })
+const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`, {
+  cache: "no-store",
+})
 
   const blogs = await res.json()
 

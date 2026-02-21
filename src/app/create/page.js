@@ -11,13 +11,17 @@ const router = useRouter()
 const handleSubmit = async (e) => {
   e.preventDefault()
 
-  await fetch("/api/blogs", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ title, author, content }),
-  })
+const res = await fetch("/api/blogs", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ title, author, content }),
+})
 
-  router.push("/dashboard") 
+  if (res.ok) {
+    router.push("/dashboard")
+  } else {
+    console.error("Failed to create blog.")
+  }
 }
 
   return (

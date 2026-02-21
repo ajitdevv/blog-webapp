@@ -1,54 +1,67 @@
 let blogs = [
+
   {
     id: "1",
-    title: "Welcome to My Blog",
-    author: "Ajeet dev",
+    title: "Starting My Blogging Journey with Next.js",
+    author: "Ajeet Dev",
     content: `
-      <h1>Welcome to My Blog</h1>
-      <p>This platform is built using <strong>Next.js</strong> and demonstrates a complete blog system.</p>
-
-      <h2>What You Can Do Here</h2>
-      <ul>
-        <li>Create new blog posts</li>
-        <li>Edit existing posts</li>
-        <li>Delete blogs</li>
-        <li>Format content using a rich text editor</li>
-      </ul>
+      <h1>Starting My Blogging Journey with Next.js</h1>
 
       <p>
-        This project is built to showcase full CRUD functionality along with
-        Server-Side Rendering and dynamic routing.
+        Every developer reaches a point where building real-world projects
+        becomes more important than just watching tutorials. This blog
+        platform is one such step in my learning journey.
       </p>
 
+      <p>
+        I built this project using <strong>Next.js</strong> to understand
+        how modern full-stack applications work in real scenarios.
+      </p>
+
+      <h2>What This Platform Allows</h2>
+      <ul>
+        <li>Create and publish blog posts</li>
+        <li>Edit content anytime</li>
+        <li>Delete posts easily</li>
+        <li>Write formatted content using a rich text editor</li>
+      </ul>
+
       <blockquote>
-        Building projects is the best way to learn modern web development.
+        The best way to learn development is by building something real.
       </blockquote>
+
+      <p>
+        This project helped me understand routing, API handling,
+        and how frontend connects with backend logic.
+      </p>
     `,
     createdAt: new Date(),
   },
 
   {
     id: "2",
-    title: "Understanding Server Side Rendering",
+    title: "What I Learned About Server-Side Rendering",
     author: "Subhash Aarya",
     content: `
-      <h1>Understanding Server Side Rendering (SSR)</h1>
+      <h1>What I Learned About Server-Side Rendering</h1>
 
       <p>
-        Server-Side Rendering allows web pages to be rendered on the server
-        before being sent to the browser.
+        While building projects with Next.js, I came across the concept
+        of Server-Side Rendering (SSR). At first it sounded complex,
+        but once implemented, it made complete sense.
       </p>
 
-      <h2>Why SSR is Important</h2>
+      <h2>Why SSR Matters</h2>
       <ul>
-        <li>Better SEO</li>
-        <li>Faster initial load</li>
-        <li>Improved performance</li>
+        <li>Improves SEO performance</li>
+        <li>Loads content faster for users</li>
+        <li>Better for dynamic data</li>
       </ul>
 
       <p>
-        In Next.js, SSR is achieved by using async server components and
-        fetching data before rendering.
+        Instead of sending an empty HTML page and loading everything
+        on the client, SSR renders the page on the server and then
+        sends ready-to-view content to the browser.
       </p>
 
       <pre><code>
@@ -58,35 +71,42 @@ export default async function Page() {
   return <div>{data.title}</div>
 }
       </code></pre>
+
+      <p>
+        Understanding SSR changed how I think about performance
+        and user experience in web applications.
+      </p>
     `,
     createdAt: new Date(),
   },
 
   {
     id: "3",
-    title: "Why Next.js is Powerful",
-    author: "Prince raj",
+    title: "Why Next.js Feels So Powerful",
+    author: "Prince Raj",
     content: `
-      <h1>Why Next.js is Powerful</h1>
+      <h1>Why Next.js Feels So Powerful</h1>
 
       <p>
-        Next.js is a React framework that provides powerful features out of the box.
+        After working with plain React, switching to Next.js felt like
+        unlocking a new level of development.
       </p>
 
-      <h2>Key Features</h2>
+      <h2>Features That Stood Out to Me</h2>
       <ul>
-        <li>App Router</li>
-        <li>Server-Side Rendering</li>
-        <li>API Routes</li>
-        <li>Automatic code splitting</li>
+        <li>File-based routing</li>
+        <li>Server and Client components</li>
+        <li>API routes built-in</li>
+        <li>Automatic performance optimizations</li>
       </ul>
 
       <p>
-        These features help developers build scalable applications quickly.
+        What I love most is that Next.js makes full-stack development
+        feel structured and organized.
       </p>
 
       <blockquote>
-        Next.js simplifies full stack development.
+        With the right framework, building scalable apps becomes easier.
       </blockquote>
     `,
     createdAt: new Date(),
@@ -94,26 +114,27 @@ export default async function Page() {
 
   {
     id: "4",
-    title: "Building a Blog App with Next.js",
+    title: "Building My Own Blog Application",
     author: "Vikky Lal",
     content: `
-      <h1>Building a Blog App with Next.js</h1>
+      <h1>Building My Own Blog Application</h1>
 
       <p>
-        In this project, we created a blog application using in-memory storage.
+        I decided to build a blog application from scratch to test
+        my understanding of CRUD operations.
       </p>
 
       <h2>Core Features Implemented</h2>
       <ul>
-        <li>Create Blog</li>
-        <li>Edit Blog</li>
-        <li>Delete Blog</li>
-        <li>View Blog Details</li>
+        <li>Create new blog posts</li>
+        <li>Edit existing blogs</li>
+        <li>Delete posts</li>
+        <li>View individual blog details</li>
       </ul>
 
       <p>
-        The application uses dynamic routing for blog detail pages and API
-        routes for managing data.
+        Instead of using a database initially, I started with in-memory
+        storage to focus on logic first.
       </p>
 
       <pre><code>
@@ -122,66 +143,77 @@ await fetch("/api/blogs", {
   body: JSON.stringify({ title, content })
 })
       </code></pre>
+
+      <p>
+        This project strengthened my understanding of API calls
+        and dynamic routing in Next.js.
+      </p>
     `,
     createdAt: new Date(),
   },
 
   {
     id: "5",
-    title: "Rich Text Editing with TipTap",
+    title: "Improving Content Creation with TipTap Editor",
     author: "Sanu",
     content: `
-      <h1>Rich Text Editing with TipTap</h1>
+      <h1>Improving Content Creation with TipTap Editor</h1>
 
       <p>
-        We integrated TipTap to allow formatted content creation.
+        A simple textarea is not enough when building a blog platform.
+        That’s why I integrated TipTap as a rich text editor.
       </p>
 
-      <h2>Formatting Options</h2>
+      <h2>Formatting Features Added</h2>
       <ul>
-        <li>Bold and Italic</li>
-        <li>Headings (H1, H2)</li>
-        <li>Lists</li>
+        <li>Bold and italic text</li>
+        <li>Multiple heading levels</li>
+        <li>Bullet and numbered lists</li>
         <li>Blockquotes</li>
-        <li>Code blocks</li>
+        <li>Code blocks for developers</li>
       </ul>
 
       <p>
-        The editor stores content in HTML format, which is rendered
-        safely using <code>dangerouslySetInnerHTML</code>.
+        The editor stores content in HTML format, which is then rendered
+        using <code>dangerouslySetInnerHTML</code>.
       </p>
 
       <blockquote>
-        A good editor enhances content creation experience.
+        A good writing experience makes content creation enjoyable.
       </blockquote>
+
+      <p>
+        Adding a rich text editor made this project feel more
+        like a real-world blogging platform.
+      </p>
     `,
     createdAt: new Date(),
   }
 ]
 
 export async function GET() {
-    return Response.json(blogs)
+  return Response.json(blogs)
 }
 
 export async function POST(req) {
-    const body = await req.json()
+  const body = await req.json()
 
-    const newBlog = {
-        id: Date.now().toString(),
-        ...body,
-        createdAt: new Date(),
-    }
+  const newBlog = {
+    id: Date.now().toString(),
+    ...body,
+    createdAt: new Date(),
+  }
 
-    blogs.push(newBlog)
+  blogs.push(newBlog)
 
-    return Response.json(newBlog)
+  return Response.json(newBlog)
 }
 export async function DELETE(req) {
-    const { id } = await req.json()
+  const { id } = await req.json()
 
-    blogs = blogs.filter((blog) => blog.id !== id)
+  blogs = blogs.filter((blog) => blog.id !== id)
 
-    return Response.json({ message: "Blog deleted" })
+  return Response.json({ message: "Blog deleted" })
 }
 export async function PUT(req) {
   const { id, title, author, content } = await req.json()

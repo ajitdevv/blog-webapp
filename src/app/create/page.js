@@ -9,7 +9,7 @@ export default function CreatePage() {
   const [content, setContent] = useState("")
 const router = useRouter()
 const handleSubmit = async (e) => {
-  e.preventDefault()
+  e.preventDefault()    
 const res = await fetch("/api/blogs", {
   method: "POST",
   headers: { "Content-Type": "application/json" },

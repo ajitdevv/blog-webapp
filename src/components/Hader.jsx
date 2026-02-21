@@ -8,7 +8,7 @@ const Hader = () => {
       <Link href="/">
         <img src="/dev.png" alt="Logo" className="w-16 h-11" />
       </Link>
-      <div className="flex gap-3 md:gap-5 items-center">
+      <div className="flex flex-row-reverse md:flex-row gap-3 md:gap-5 items-center">
         <Themetoggle />
         <Link
           href="/dashboard"

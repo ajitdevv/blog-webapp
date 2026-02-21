@@ -22,7 +22,7 @@ export default function RichTextEditor({ content, setContent }) {
   if (!mounted || !editor) return null;
 
   return (
-    <div className="border rounded bg-background shadow-sm">
+    <div className="border rounded h-140 bg-background shadow-sm">
       <div className="flex flex-wrap gap-2 p-3 border-b bg-muted/20">
         <button
           type="button"

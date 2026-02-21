@@ -6,7 +6,6 @@ export default function Footer() {
     return (
         <footer className="mt-16 border-t bg-background">
             <div className="max-w-6xl mx-auto px-6 py-10 items-center justify-center flex flex-col sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 gap-8">
-
                 {/* Brand */}
                 <div  className="flex flex-col items-center md:items-start">
                     <h2 className="text-xl font-bold">AJ Blog</h2>

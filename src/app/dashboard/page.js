@@ -30,16 +30,16 @@ export default function Dashboard() {
 
     return (
         <div className="max-w-4xl mx-auto p-10">
-            <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
+            <h1 className="md:text-3xl text-xl font-bold mb-6">Dashboard</h1>
 
             {blogs.map((blog) => (
                 <div
                     key={blog.id}
-                    className="border p-4 mb-4 rounded flex justify-between items-center"
+                    className="border p-3 md:p-4 mb-4 rounded flex justify-between items-center"
                 >
                     <div>
-                        <h2 className="font-semibold">{blog.title}</h2>
-                        <p className="text-gray-500 text-sm">By:- {blog.author}</p>
+                        <h2 className="font-semibold text-sm md:text-base">{blog.title}</h2>
+                        <p className="text-muted text-sm">By:- {blog.author}</p>
                     </div>
 
                     <div className="flex gap-3">

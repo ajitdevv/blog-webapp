@@ -104,3 +104,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.btn {
+ @apply px-3 py-1 rounded border text-sm transition bg-foreground text-background border-foreground hover:bg-foreground/70 ;
+}

@@ -25,24 +25,24 @@ const res = await fetch("/api/blogs", {
 
   return (
     <div className="max-w-3xl mx-auto p-10">
-      <h1 className="text-3xl font-bold mb-6">Create Blog</h1>
+      <h1 className="text-3xl font-semibold md:font-bold mb-6">Create Blog</h1>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <input
-          className="border p-3 w-full rounded"
+          className="border p-1 md:p-3 w-full rounded"
           placeholder="Title"
           onChange={(e) => setTitle(e.target.value)}
         />
 
         <input
-          className="border p-3 w-full rounded bg-background"
+          className="border p-1 md:p-3 w-full rounded bg-background"
           placeholder="Author"
           onChange={(e) => setAuthor(e.target.value)}
         />
 
         <RichTextEditor content={content} setContent={setContent} />
 
-        <button className="bg-foreground text-background px-6 py-3 rounded">
+    <button className="bg-foreground text-background px-6 py-3 rounded font-semibold">
           Publish
         </button>
       </form>

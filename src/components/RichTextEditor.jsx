@@ -19,37 +19,27 @@ export default function RichTextEditor({ content, setContent }) {
       setContent(editor.getHTML());
     },
   });
-
   if (!mounted || !editor) return null;
-
-  const btn = (active) =>
-    `px-3 py-1 rounded border text-sm transition ${
-      active
-        ? "bg-white text-black hover:bg-gray-100"
-        : "bg-foreground text-background border-foreground hover:bg-foreground/70"
-    }`;
 
   return (
     <div className="border rounded bg-background shadow-sm">
-      {/* Toolbar */}
       <div className="flex flex-wrap gap-2 p-3 border-b bg-muted/20">
         <button
           type="button"
-          className={btn(editor.isActive("bold"))}
+          className="btn"
           onClick={() => editor.chain().focus().toggleBold().run()}
         >
           Bold
         </button>
-
         <button
           type="button"
-          className={btn(editor.isActive("italic"))}
+          className="btn"
           onClick={() => editor.chain().focus().toggleItalic().run()}
         >
           Italic
         </button>
         <button
-          className={btn(editor.isActive("italic"))}
+          className="btn"
           type="button"
           onClick={() => {
             const url = prompt("Enter image URL");
@@ -67,7 +57,7 @@ export default function RichTextEditor({ content, setContent }) {
         </button>
         <button
           type="button"
-          className={btn(editor.isActive("heading", { level: 1 }))}
+          className="btn"
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 1 }).run()
           }
@@ -77,7 +67,7 @@ export default function RichTextEditor({ content, setContent }) {
 
         <button
           type="button"
-          className={btn(editor.isActive("heading", { level: 2 }))}
+          className="btn"
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 2 }).run()
           }
@@ -87,7 +77,7 @@ export default function RichTextEditor({ content, setContent }) {
 
         <button
           type="button"
-          className={btn(editor.isActive("bulletList"))}
+          className="btn"
           onClick={() => editor.chain().focus().toggleBulletList().run()}
         >
           Bullet
@@ -95,7 +85,7 @@ export default function RichTextEditor({ content, setContent }) {
 
         <button
           type="button"
-          className={btn(editor.isActive("orderedList"))}
+          className="btn"
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
         >
           Numbered
@@ -103,7 +93,7 @@ export default function RichTextEditor({ content, setContent }) {
 
         <button
           type="button"
-          className={btn(editor.isActive("blockquote"))}
+          className="btn"
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
         >
           Quote
@@ -111,7 +101,7 @@ export default function RichTextEditor({ content, setContent }) {
 
         <button
           type="button"
-          className={btn(editor.isActive("codeBlock"))}
+          className="btn"
           onClick={() => editor.chain().focus().toggleCodeBlock().run()}
         >
           Code
@@ -119,16 +109,14 @@ export default function RichTextEditor({ content, setContent }) {
 
         <button
           type="button"
-          className={btn(editor.isActive("italic"))}
-
-         
+          className="btn"
           onClick={() => editor.chain().focus().undo().run()}
         >
           Undo
         </button>
 
         <button
-          className={btn(editor.isActive("italic"))}
+          className="btn"
           type="button"
           onClick={() => editor.chain().focus().redo().run()}
         >

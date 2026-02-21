@@ -7,7 +7,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto p-8">
-        <h2 className="text-2xl font-semibold mb-6">
+        <h2 className="md:text-3xl text-xl font-semibold mb-6">
           Latest Blogs
         </h2>
         {blogs.length === 0 ? (
@@ -16,16 +16,16 @@ export default async function Home() {
           blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-card shadow p-6 mb-6 rounded-lg"
+              className="bg-card shadow md:p-6 p-3 mb-3 md:mb-6 rounded-lg"
             >
-              <h3 className="text-xl font-bold mb-2">
+              <h3 className="text-base md:text-xl font-bold mb-0.5 md:mb-2">
                 {blog.title}
               </h3>
-              <p className="text-foreground text-sm mb-3">
+              <p className="text-foreground text-sm mb-1 md:mb-3">
                 By :- {blog.author}
               </p>
               <div
-                className="text-foreground mb-4 line-clamp-1"
+                className="text-foreground mb-2 md:mb-4 line-clamp-1"
                 dangerouslySetInnerHTML={{
                   __html: blog.content,
                 }}

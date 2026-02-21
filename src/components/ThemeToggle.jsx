@@ -9,9 +9,7 @@ const Themetoggle = () => {
 
     useEffect(() => {
         setMounted(true)
-
         const savedTheme = localStorage.getItem("theme")
-
         if (savedTheme === "dark") {
             setTheme(true)
             document.documentElement.classList.add("dark")

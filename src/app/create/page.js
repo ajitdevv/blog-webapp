@@ -18,7 +18,7 @@ export default function CreatePage() {
     if (blogs.length === 0) return 1;
 
     const lastId = blogs.length
-    setlastid(lastId + 1)
+    setlastid((lastId + 2))
 
   };
   useEffect(() => {

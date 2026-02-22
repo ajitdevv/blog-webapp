@@ -49,14 +49,13 @@ It is designed as a portfolio-ready project for internships and frontend/full-st
 **Frontend:** Next.js (React)  
 **Backend:** Next.js API Routes  
 **Editor:** TipTap Rich Text Editor  
-**Styling:** CSS / Tailwind CSS (if used)  
+**Styling:** Tailwind CSS  
 **Deployment:** Vercel  
 
 ---
 
 ## 📸 Screenshots
 
-> Create a folder named `screenshots` and add images there.
 
 ### 🏠 Homepage
 ![Homepage](./screenshots/homepage.png)
@@ -65,7 +64,7 @@ It is designed as a portfolio-ready project for internships and frontend/full-st
 ![Create Blog](./screenshots/create.png)
 
 ### 📄 Blog Details Page
-![Details](./screenshots/details.png)
+![Details](./screenshots/detail.png)
 
 ---
 

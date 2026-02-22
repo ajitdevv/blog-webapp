@@ -5,12 +5,6 @@ import { useEffect, useState } from "react"
 
 export default function BlogDetail() {
   const { id } = useParams()
-  // const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`, {
-  //   cache: "no-store",
-  // })
-  const [title, setTitle] = useState("")
-  const [author, setAuthor] = useState("")
-  const [content, setContent] = useState("")
 const [blog,setblog]=useState("")
   useEffect(() => {
     const fetchBlog = async () => {
@@ -21,7 +15,6 @@ const [blog,setblog]=useState("")
     }
     fetchBlog()
   }, [id])
-    console.log(blog);
 
   if (!blog) {
     return <h1 className="text-red-500 p-10">Blog Not Found</h1>

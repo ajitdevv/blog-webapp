@@ -4,9 +4,17 @@ import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { useEffect, useState } from "react";
 import Image from "@tiptap/extension-image";
+import { Bold } from "lucide-react";
 export default function RichTextEditor({ content, setContent }) {
   const [mounted, setMounted] = useState(false);
-
+  const [isBold, setIsBold] = useState(false);
+  const [isItalic, setIsItalic] = useState(false);
+  const [isH1, setIsH1] = useState(false);
+  const [isH2, setIsH2] = useState(false);
+  const [isBullet, setIsBullet] = useState(false);
+  const [isOrdered, setIsOrdered] = useState(false);
+  const [isQuote, setIsQuote] = useState(false);
+  const [isCodeBlock, setIsCodeBlock] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -19,27 +27,35 @@ export default function RichTextEditor({ content, setContent }) {
       setContent(editor.getHTML());
     },
   });
+  console.log(isBold);
+  
   if (!mounted || !editor) return null;
-
+  const activeClass = "bg-foreground text-background px-3 py-1 rounded";
+  const normalClass = "bg-muted px-3 py-1 rounded";
   return (
-    <div className="border rounded h-140 bg-background shadow-sm">
+    <div className="border rounded h-fit bg-background shadow-sm">
       <div className="flex flex-wrap gap-2 p-3 border-b bg-muted/20">
         <button
           type="button"
-          className="btn"
-          onClick={() => editor.chain().focus().toggleBold().run()}
+          className={isBold?activeClass:normalClass}
+          onClick={() => {
+            (editor.chain().focus().toggleBold().run(), setIsBold(!isBold));
+          }}
         >
           Bold
         </button>
         <button
           type="button"
-          className="btn"
-          onClick={() => editor.chain().focus().toggleItalic().run()}
+          className={isItalic?activeClass:normalClass}
+          onClick={() => {
+            (editor.chain().focus().toggleItalic().run(),
+              setIsItalic(!isItalic));
+          }}
         >
           Italic
         </button>
         <button
-          className="btn"
+          className={normalClass}
           type="button"
           onClick={() => {
             const url = prompt("Enter image URL");
@@ -57,66 +73,77 @@ export default function RichTextEditor({ content, setContent }) {
         </button>
         <button
           type="button"
-          className="btn"
-          onClick={() =>
-            editor.chain().focus().toggleHeading({ level: 1 }).run()
-          }
+          className={isH1?activeClass:normalClass}
+          onClick={() => {
+            (editor.chain().focus().toggleHeading({ level: 1 }).run(),
+              setIsH1(!isH1));
+          }}
         >
           H1
         </button>
 
         <button
           type="button"
-          className="btn"
-          onClick={() =>
-            editor.chain().focus().toggleHeading({ level: 2 }).run()
-          }
+          className={isH2?activeClass:normalClass}
+          onClick={() => {
+            (editor.chain().focus().toggleHeading({ level: 2 }).run(),
+              setIsH2(!isH2));
+          }}
         >
           H2
         </button>
 
         <button
           type="button"
-          className="btn"
-          onClick={() => editor.chain().focus().toggleBulletList().run()}
+          className={isBullet?activeClass:normalClass}
+          onClick={() => {
+            (editor.chain().focus().toggleBulletList().run(),
+              setIsBullet(!isBullet));
+          }}
         >
           Bullet
         </button>
 
         <button
           type="button"
-          className="btn"
-          onClick={() => editor.chain().focus().toggleOrderedList().run()}
+          className={isOrdered?activeClass:normalClass}
+          onClick={() => {
+            (editor.chain().focus().toggleOrderedList().run(),
+              setIsOrdered(!isOrdered));
+          }}
         >
           Numbered
         </button>
 
         <button
           type="button"
-          className="btn"
-          onClick={() => editor.chain().focus().toggleBlockquote().run()}
+          className={isQuote?activeClass:normalClass}
+          onClick={() => {
+            (editor.chain().focus().toggleBlockquote().run(),
+              setIsQuote(!isQuote));
+          }}
         >
           Quote
         </button>
 
         <button
           type="button"
-          className="btn"
-          onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+          className={isCodeBlock?activeClass:normalClass}
+          onClick={() => {editor.chain().focus().toggleCodeBlock().run(),setIsCodeBlock(!isCodeBlock)}}
         >
           Code
         </button>
 
         <button
           type="button"
-          className="btn"
+          className={normalClass}
           onClick={() => editor.chain().focus().undo().run()}
         >
           Undo
         </button>
 
         <button
-          className="btn"
+          className={normalClass}
           type="button"
           onClick={() => editor.chain().focus().redo().run()}
         >

@@ -195,12 +195,27 @@ export async function GET() {
   return Response.json(blogs)
 }
 
+// export async function POST(req) {
+//   const body = await req.json()
+
+//   const newBlog = {
+//     // id: Date.now().toString(),
+//     // ...body,
+//     createdAt: new Date(),
+//   }
+
+//   blogs.push(newBlog)
+
+//   return Response.json(newBlog)
+// }
 export async function POST(req) {
   const body = await req.json()
 
   const newBlog = {
-    id: Date.now().toString(),
-    ...body,
+    id: body.lastid.toString(),
+    title: body.title,
+    author: body.author,
+    content: body.content,
     createdAt: new Date(),
   }
 

@@ -1,17 +1,31 @@
-export default async function BlogDetail({ params }) {
-  const { id } = await params
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`, {
-    cache: "no-store",
-  })
+"use client"
 
-  const blogs = await res.json()
+import { useParams } from "next/navigation"
+import { useEffect, useState } from "react"
 
-  const blog = blogs.find((b) => b.id === id)
+export default function BlogDetail() {
+  const { id } = useParams()
+  // const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`, {
+  //   cache: "no-store",
+  // })
+  const [title, setTitle] = useState("")
+  const [author, setAuthor] = useState("")
+  const [content, setContent] = useState("")
+const [blog,setblog]=useState("")
+  useEffect(() => {
+    const fetchBlog = async () => {
+      const res = await fetch("/api/blogs")
+      const blogs = await res.json()
+      const blog = blogs.find((b) => b.id === id)
+      setblog(blog)
+    }
+    fetchBlog()
+  }, [id])
+    console.log(blog);
 
   if (!blog) {
     return <h1 className="text-red-500 p-10">Blog Not Found</h1>
   }
-  console.log(blog);
 
   return (
     <div className="max-w-3xl mx-auto p-10">

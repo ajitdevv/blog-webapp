@@ -1,4 +1,4 @@
-# 📝 AJ Blog Web App
+# 📝 Blog Web App
 
 ![Next.js](https://img.shields.io/badge/Next.js-000?logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
@@ -8,7 +8,7 @@
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Link
 
 🔗 https://blog-webapp-mu-eight.vercel.app/
 

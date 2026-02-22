@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📝 AJ Blog Web App
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-000?logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000?logo=vercel&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Active-success)
 
-First, run the development server:
+---
+
+## 🚀 Live Demo
+
+🔗 https://blog-webapp-mu-eight.vercel.app/
+
+---
+
+## 📌 Project Overview
+
+AJ Blog is a modern full-stack blog application built using **Next.js**.  
+It allows users to create, edit, delete, and read blog posts with a rich text editor.
+
+This project demonstrates:
+
+- Clean UI structure  
+- Dynamic routing  
+- CRUD functionality  
+- API integration  
+- Component-based architecture  
+- Deployment workflow  
+
+It is designed as a portfolio-ready project for internships and frontend/full-stack roles.
+
+---
+
+## ✨ Key Features
+
+- 📰 Display latest blog posts on homepage  
+- ✍️ Create new blog posts  
+- 🛠️ Edit & delete functionality  
+- 🧠 Rich Text Editor (TipTap integration)  
+- 🔄 Dynamic routing for blog detail pages  
+- ⚡ Optimized performance with Next.js  
+- 🌐 Deployed on Vercel  
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:** Next.js (React)  
+**Backend:** Next.js API Routes  
+**Editor:** TipTap Rich Text Editor  
+**Styling:** Tailwind CSS  
+**Deployment:** Vercel  
+
+---
+
+## 📸 Screenshots
+
+
+### 🏠 Homepage
+![Homepage](./screenshots/homepage.png)
+
+### ✍️ Create Blog
+![Create Blog](./screenshots/create.png)
+
+### 📄 Blog Details Page
+![Details](./screenshots/detail.png)
+
+---
+
+## 📦 Installation & Setup
+
+Clone the repository:
 
 ```bash
+git clone https://github.com/ajitdevv/blog-webapp
+cd blog-webapp
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open in browser: http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📦 blog-webapp
+ ┣ 📂src
+ ┣ 📂 app 
+ ┃  ┣ 📂 api / blogs
+ ┃  ┃  ┗ 📜 route.js
+ ┃  ┣ 📂 blog / [id]
+ ┃  ┃  ┗ 📜 page.js
+ ┃  ┣ 📜 create
+ ┃  ┃  ┗ 📜 page.js
+ ┃  ┣ 📜 dashboard
+ ┃  ┃  ┗ 📜 page.js  
+ ┃  ┣ 📜 edit/[id]
+ ┃  ┃  ┗ 📜 page.js
+ ┃  ┣ 📜 globals.css
+ ┃  ┣ 📜 layout.js
+ ┃  ┗ 📜 page.js
+ ┣ 📂 components
+ ┃  ┣ 📜 Footer.jsx
+ ┃  ┣ 📜 Hader.jsx
+ ┃  ┣ 📜 RichTexteditor.jsx
+ ┃  ┗ 📜 ThemeToggle.jsx
+ ┣ 📜 package.json
+ ┣ 📜 README.md
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+This project showcases:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-Strong understanding of React fundamentals
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+-Next.js routing & API handling
 
-## Deploy on Vercel
+-Modular component structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-Real-world CRUD operations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-Deployment knowledge using Vercel
+
+-Clean and maintainable code structure
+
+
+👨‍💻 Author
+
+Ajeet Bairwa
+Aspiring Full Stack Developer 🚀
+
+GitHub: https://github.com/ajitdevv

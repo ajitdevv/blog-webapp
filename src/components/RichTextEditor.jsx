@@ -27,7 +27,6 @@ export default function RichTextEditor({ content, setContent }) {
       setContent(editor.getHTML());
     },
   });
-  console.log(isBold);
   
   if (!mounted || !editor) return null;
   const activeClass = "bg-foreground text-background px-3 py-1 rounded";

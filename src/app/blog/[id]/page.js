@@ -20,7 +20,7 @@ export default async function BlogDetail({ params }) {
       <div
         dangerouslySetInnerHTML={{ __html: blog.content }}
       />
-      <h1 className="mt-2"> Created :- {new Date(blog.createdAt).toLocaleString("en-IN", {
+      <h1 className="mt-2"> Created At :- {new Date(blog.createdAt).toLocaleString("en-IN", {
         day: "numeric",
         month: "long",
         year: "numeric",

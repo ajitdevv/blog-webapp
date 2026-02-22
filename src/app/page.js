@@ -24,12 +24,13 @@ export default async function Home() {
               <p className="text-foreground text-sm mb-1 md:mb-3">
                 By :- {blog.author}
               </p>
-              <div
+              {/* <div
                 className="text-foreground mb-2 md:mb-4 line-clamp-1"
                 dangerouslySetInnerHTML={{
                   __html: blog.content,
                 }}
-              />
+              /> */}
+              <h2>CreatedAt :- {new Date(blog.createdAt).toLocaleString("en-IN")}</h2>
               <Link
                 href={`/blog/${blog.id}`}
                 className="text-primary hover:text-primary/70 font-medium"

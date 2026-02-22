@@ -12,13 +12,13 @@ const Hader = () => {
         <Themetoggle />
         <Link
           href="/dashboard"
-          className="bg-background text-foreground px-2 py-1 text-xs md:text-base md:px-4 md:py-2 rounded"
+          className="bg-background text-foreground hover:text-foreground/70 px-2 py-1 text-xs md:text-base md:px-4 md:py-2 rounded"
         >
           Dashboard
         </Link>
         <Link
           href="/create"
-          className="bg-foreground text-background px-2 py-1 md:px-4 md:text-base md:py-2 text-xs rounded"
+          className="bg-foreground hover:bg-foreground/90 text-background px-2 py-1 md:px-4 md:text-base md:py-2 text-xs rounded"
         >
           Create Blog
         </Link>
